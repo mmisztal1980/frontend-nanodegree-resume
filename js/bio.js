@@ -28,6 +28,7 @@ var bio = {
 	"display": function () {
 		var headerEl = $("#header");
 		var contactsEl = $("#topContacts");
+		var footerContactsEl = $("#footerContacts");
 			
 		// Header
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role)
@@ -39,14 +40,19 @@ var bio = {
 		// Contacts
 		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 		contactsEl.append(formattedMobile);
+		footerContactsEl.append(formattedMobile);
 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 		contactsEl.append(formattedEmail);
+		footerContactsEl.append(formattedEmail);
 		var formattedtwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 		contactsEl.append(formattedtwitter);
+		footerContactsEl.append(formattedtwitter);
 		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 		contactsEl.append(formattedGithub);
+		footerContactsEl.append(formattedGithub);
 		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 		contactsEl.append(formattedLocation);
+		footerContactsEl.append(formattedLocation);
 			
 		// Pic & Welcome MSG
 		var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
